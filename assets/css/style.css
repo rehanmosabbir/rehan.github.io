@@ -32,55 +32,63 @@ body {
 	padding: 80px 0;
 }
 
-.single-service-box {
-    display:  block;
-    border:  2px solid #e8e8e8;
-    border-radius:  3px;
-    padding:  40px;
-    text-align:  center;
-    position:  relative;
-    color: #333;
-    padding-top: 58px;
+.service-box-bg-1 {background-image: url(../img/bg-1.jpg);}
+.service-box-bg-2 {background-image: url(../img/bg-2.jpg);}
+.service-box-bg-3 {background-image: url(../img/bg-3.jpg);}
+.service-box-bg-4 {background-image: url(../img/bg-4.jpg);}
+
+
+.service-box {
+  height: 200px;
+  border-radius: 5px;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  z-index: 2;
 }
-
-.service-icon {
-    position:  absolute;
-    height:  70px;
-    width:  70px;
-    color: #fff;
-    background:  #1abf75;
-    top: -35px;
-    line-height: 70px;
-    font-size:  30px;
-    left:  50%;
-    margin-left:  -35px;
-    border-radius:  50%;
+.service-box:hover .service-box-hover {
+  bottom: 30px;
 }
-
-
-
-.single-service-box h3 {
-    font-size:  20px;
+a.boxed-btn {
+  background: #ffce42;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
 }
-
-.single-service-box:hover {
-    color: #333;
+.service-box-hover {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  transition: .3s;
 }
-
-.single-service-box p {
-    line-height: 25px;
-    font-weight: 400;
-    color:  #868686;
+h3 {
 }
-
-i.fa.fa-leaf.service-icon {
-    background:  #1abf75;
+.service-box-hover h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
-
-i.fa.fa-inbox.service-icon {
-	background: #65c053;
+.service-box:hover .boxed-btn {
+  opacity: 1;
+  visibility: visible;
 }
-
-i.fa.fa-calendar.service-icon {
-	background:  #95c033;
+.service-box:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: #000;
+  z-index: -1;
+  opacity: .3;
 }
